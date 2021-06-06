@@ -2,3 +2,9 @@
 .env
 mykey.pem
 mykey.pub
+/.idea
+.DS_Store
+composer.json
+composer.lock
+LICENSE
+/.github
