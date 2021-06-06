@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="60b720e2-38f4-4297-8a73-70adffee4ef9" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable path="/usr/local/bin/composer.phar" />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpDebugGeneral" xdebug_debug_port="9003" local_pass_configuration_options="false" />
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/firebase/php-jwt" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1tYNGmL0VBXrA1Sf60hJLCga7kY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.debug" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="PhpRemoteDebugRunConfigurationType" factoryName="PHP Remote Debug" singleton="false" filter_connections="NOT_FILTER">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SQLPlugin.ProjectConfiguration">
+    <queries />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="60b720e2-38f4-4297-8a73-70adffee4ef9" name="Default Changelist" comment="" />
+      <created>1622941969520</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1622941969520</updated>
+      <workItem from="1622941971509" duration="12386000" />
+      <workItem from="1622963059230" duration="329000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="109" y="229" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1622953508196">
+      <screen x="0" y="25" width="1680" height="972" />
+    </state>
+    <state x="109" y="229" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1680.972@0.25.1680.972" timestamp="1622953508196" />
+    <state x="399" y="159" key="SettingsEditor" timestamp="1622953438484">
+      <screen x="0" y="25" width="1680" height="972" />
+    </state>
+    <state x="399" y="159" key="SettingsEditor/0.25.1680.972@0.25.1680.972" timestamp="1622953438484" />
+    <state x="517" y="258" width="597" height="518" key="find.popup" timestamp="1622950504967">
+      <screen x="0" y="25" width="1680" height="972" />
+    </state>
+    <state x="517" y="258" width="597" height="518" key="find.popup/0.25.1680.972@0.25.1680.972" timestamp="1622950504967" />
+  </component>
+</project>

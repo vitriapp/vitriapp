@@ -1,0 +1,4 @@
+/vendor/
+.env
+mykey.pem
+mykey.pub
