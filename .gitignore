@@ -13,3 +13,4 @@ LICENSE
 jwt-decode.php
 jwt-generate.php
 /.stylelintrc.json
+/services/

@@ -14,6 +14,7 @@
 
 namespace Mini\Controller;
 
+use Mini\Constants\Constants;
 use Mini\Model\Song;
 
 class SongsController
@@ -22,18 +23,14 @@ class SongsController
      * PAGE: index
      * This method handles what happens when you move to http://yourproject/songs/index
      */
-    public function index()
+    final public function index()
     {
-        // Instance new Model (Song)
-        $Song = new Song();
-        // getting all songs and amount of songs
-        $songs = $Song->getAllSongs();
-        $amount_of_songs = $Song->getAmountOfSongs();
-
-       // load views. within the views we can echo out $songs and $amount_of_songs easily
-        require APP . 'view/_templates/header.php';
-        require APP . 'view/songs/index.php';
-        require APP . 'view/_templates/footer.php';
+        // load views. within the views we can echo out $songs and $amount_of_songs easily
+        /** @noinspection PhpIncludeInspection */
+        require APP . Constants::ROUTE_HEADER;
+        require APP . Constants::ROUTE_SONGS.'index.php';
+        /** @noinspection PhpIncludeInspection */
+        require APP . Constants::ROUTE_FOOTER;
     }
 
     /**
@@ -55,7 +52,7 @@ class SongsController
         }
 
         // where to go after song has been added
-        header('location: ' . URL . 'songs/index');
+        header(Constants::LOCATION.': ' . URL . Constants::SONGS.'/'.Constants::INDEX);
     }
 
     /**
@@ -78,10 +75,10 @@ class SongsController
         }
 
         // where to go after song has been deleted
-        header('location: ' . URL . 'songs/index');
+        header(Constants::LOCATION.': ' . URL . Constants::SONGS.'/'.Constants::INDEX);
     }
 
-     /**
+    /**
      * ACTION: editSong
      * This method handles what happens when you move to http://yourproject/songs/editsong
      * @param int $song_id Id of the to-edit song
@@ -101,9 +98,11 @@ class SongsController
                 $page->index();
             } else {
                 // load views. within the views we can echo out $song easily
-                require APP . 'view/_templates/header.php';
-                require APP . 'view/songs/edit.php';
-                require APP . 'view/_templates/footer.php';
+                /** @noinspection PhpIncludeInspection */
+                require APP . Constants::ROUTE_HEADER;
+                require APP . Constants::ROUTE_SONGS.'edit.php';
+                /** @noinspection PhpIncludeInspection */
+                require APP . Constants::ROUTE_FOOTER;
             }
         } else {
             // redirect user to songs index page (as we don't have a song_id)
@@ -135,7 +134,6 @@ class SongsController
 
     /**
      * AJAX-ACTION: ajaxGetStats
-     * TODO documentation
      */
     public function ajaxGetStats()
     {
