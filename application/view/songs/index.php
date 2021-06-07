@@ -1,3 +1,11 @@
+<?php
+use Mini\Model\Song;
+// Instance new Model (Song)
+$Song = new Song();
+// getting all songs and amount of songs
+$songs = $Song->getAllSongs();
+$amount_of_songs = $Song->getAmountOfSongs();
+?>
 <div class="container">
     <h1>Songs</h1>
     <h2>You are in the View: application/view/song/index.php (everything in this box comes from that file)</h2>
@@ -6,11 +14,17 @@
         <h3>Add a song</h3>
         <form action="<?php echo URL; ?>songs/addsong" method="POST">
             <label>Artist</label>
-            <input type="text" name="artist" value="" required />
+            <label>
+                <input type="text" name="artist" value="" required />
+            </label>
             <label>Track</label>
-            <input type="text" name="track" value="" required />
+            <label>
+                <input type="text" name="track" value="" required />
+            </label>
             <label>Link</label>
-            <input type="text" name="link" value="" />
+            <label>
+                <input type="text" name="link" value="" />
+            </label>
             <input type="submit" name="submit_add_song" value="Submit" />
         </form>
     </div>
@@ -24,7 +38,11 @@
         </div>
         <h3>List of songs (data from model)</h3>
         <table>
+            <caption>Information sings</caption>
             <thead style="background-color: #ddd; font-weight: bold;">
+            <tr>
+                <th id="title" rowspan="6">&nbsp;</th>
+            </tr>
             <tr>
                 <td>Id</td>
                 <td>Artist</td>
@@ -37,9 +55,15 @@
             <tbody>
             <?php foreach ($songs as $song) { ?>
                 <tr>
-                    <td><?php if (isset($song->id)) echo htmlspecialchars($song->id, ENT_QUOTES, 'UTF-8'); ?></td>
-                    <td><?php if (isset($song->artist)) echo htmlspecialchars($song->artist, ENT_QUOTES, 'UTF-8'); ?></td>
-                    <td><?php if (isset($song->track)) echo htmlspecialchars($song->track, ENT_QUOTES, 'UTF-8'); ?></td>
+                    <td><?php if (isset($song->id)) {
+                            echo htmlspecialchars($song->id, ENT_QUOTES, 'UTF-8');
+                        } ?></td>
+                    <td><?php if (isset($song->artist)) {
+                            echo htmlspecialchars($song->artist, ENT_QUOTES, 'UTF-8');
+                        } ?></td>
+                    <td><?php if (isset($song->track)) {
+                            echo htmlspecialchars($song->track, ENT_QUOTES, 'UTF-8');
+                        } ?></td>
                     <td>
                         <?php if (isset($song->link)) { ?>
                             <a href="<?php echo htmlspecialchars($song->link, ENT_QUOTES, 'UTF-8'); ?>"><?php echo htmlspecialchars($song->link, ENT_QUOTES, 'UTF-8'); ?></a>
