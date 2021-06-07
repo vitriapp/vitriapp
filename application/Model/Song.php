@@ -12,6 +12,7 @@
 
 namespace Mini\Model;
 
+use Mini\Constants\Constants;
 use Mini\Core\Model;
 
 class Song extends Model
@@ -34,7 +35,6 @@ class Song extends Model
 
     /**
      * Add a song to database
-     * TODO put this explanation into readme and remove it from here
      * Please note that it's not necessary to "clean" our input in any way. With PDO all input is escaped properly
      * automatically. We also don't use strip_tags() etc. here so we keep the input 100% original (so it's possible
      * to save HTML and JS to the database, which is a valid use case). Data will only be cleaned when putting it out
@@ -43,7 +43,7 @@ class Song extends Model
      * @param string $track Track
      * @param string $link Link
      */
-    public function addSong($artist, $track, $link)
+    final public function addSong($artist, $track, $link)
     {
         $sql = "INSERT INTO song (artist, track, link) VALUES (:artist, :track, :link)";
         $query = $this->db->prepare($sql);
@@ -65,7 +65,7 @@ class Song extends Model
     {
         $sql = "DELETE FROM song WHERE id = :song_id";
         $query = $this->db->prepare($sql);
-        $parameters = array(':song_id' => $song_id);
+        $parameters = array(Constants::ID_SONG => $song_id);
 
         // useful for debugging: you can see the SQL behind above construction by using:
         // echo '[ PDO DEBUG ]: ' . Helper::debugPDO($sql, $parameters);  exit();
@@ -94,7 +94,6 @@ class Song extends Model
 
     /**
      * Update a song in database
-     * // TODO put this explaination into readme and remove it from here
      * Please note that it's not necessary to "clean" our input in any way. With PDO all input is escaped properly
      * automatically. We also don't use strip_tags() etc. here so we keep the input 100% original (so it's possible
      * to save HTML and JS to the database, which is a valid use case). Data will only be cleaned when putting it out
