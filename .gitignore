@@ -8,3 +8,8 @@ LICENSE
 .idea
 /.github
 .github
+.sql
+*.sql
+jwt-decode.php
+jwt-generate.php
+/.stylelintrc.json
