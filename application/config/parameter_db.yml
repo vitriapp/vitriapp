@@ -15,10 +15,10 @@ database: 'vitriappcombd'
 
 ---
 # Para base de datos externa o la del hosting: 2
-tipo: 'mysql'
-servidor: 'localhost'
-puerto: '3306'
-usuario: 'u411379380_lamamapollito'
-clave: 'QWEQDASDE23423423+-+-+VVsdasdasda123+++'
-baseDeDatos: 'u411379380_vitriappcombd'
+type: 'mysql'
+server: 'localhost'
+port: '3306'
+user: 'u411379380_lamamapollito'
+password: 'QWEQDASDE23423423+-+-+VVsdasdasda123+++'
+database: 'u411379380_vitriappcombd'
 ...
