@@ -15,7 +15,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "firebase/php-jwt": "^5.3",
+        "firebase/php-jwt": "^6.0",
       "ext-yaml": "*",
       "ext-openssl": "*"
     }
